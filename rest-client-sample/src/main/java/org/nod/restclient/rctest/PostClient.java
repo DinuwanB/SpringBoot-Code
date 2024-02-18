@@ -2,11 +2,12 @@ package org.nod.restclient.rctest;
 
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
 
 import java.util.List;
 
-@Component
+@Service
 public class PostClient {
 
     private final RestClient restClient;
@@ -17,7 +18,7 @@ public class PostClient {
                 .build();
     }
 
-    public List<Post> findAllPosts() {
+    public List<Post> findPosts() {
         return restClient.get()
                 .uri("/posts")
                 .retrieve()
