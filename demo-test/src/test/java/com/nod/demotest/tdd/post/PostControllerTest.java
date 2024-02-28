@@ -105,7 +105,7 @@ public class PostControllerTest {
     @Test
     void shouldCreateNewPostWithValidJsonObject() throws Exception {
 
-        var post = new Post(3,1, "New Post", "New post Body", null);
+        var post = new Post(3, 1, "New Post", "New post Body", null);
         when(postRepository.save(post)).thenReturn(post);
 
         var json = STR."""
@@ -127,7 +127,7 @@ public class PostControllerTest {
     @Test
     void shouldNotCreateNewPostWithInvalidJsonObject() throws Exception {
 
-        var post = new Post(3,1, "", "", null);
+        var post = new Post(3, 1, "", "", null);
         when(postRepository.save(post)).thenReturn(post);
 
         var json = STR."""
@@ -149,7 +149,7 @@ public class PostControllerTest {
     @Test
     void shouldUpdatePostWithValidJsonObject() throws Exception {
 
-        var post = new Post(1,1, "New updated title", "New updated post body", 1);
+        var post = new Post(1, 1, "New updated title", "New updated post body", 1);
 
         when(postRepository.findById(1)).thenReturn(Optional.of(post));
         when(postRepository.save(post)).thenReturn(post);
