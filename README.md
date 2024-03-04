@@ -1,4 +1,4 @@
-# SpringBoot-Code
+# SpringBoot-Code Samples
 
 #### Virtual Thread Post
 https://www.danvega.dev/blog/virtual-threads-spring-boot
