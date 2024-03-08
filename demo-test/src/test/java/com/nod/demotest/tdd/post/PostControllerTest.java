@@ -45,7 +45,7 @@ public class PostControllerTest {
     void shouldFindAllPosts() throws Exception {
 
         String jsonResponse = """
-                [
+               [
                     {
                         "id" : 1,
                         "userId": 1,
@@ -60,7 +60,7 @@ public class PostControllerTest {
                         "body":"hello body 2",
                         "version": null
                     }
-                ]
+               ]
                 """;
 
         when(postRepository.findAll()).thenReturn(postList);

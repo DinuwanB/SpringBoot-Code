@@ -7,6 +7,11 @@
         <option value="$PROJECT_DIR$/Spring-code/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/rest-client-sample/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-test/pom.xml" />
+        <option value="$PROJECT_DIR$/Virtual Thread with SpringBoot/virtual-thread-main/pom.xml" />
+        <option value="$PROJECT_DIR$/Virtual Thread with SpringBoot/virtual-thread-blocker-app/pom.xml" />
+        <option value="$PROJECT_DIR$/ci-cd/pom.xml" />
+        <option value="$PROJECT_DIR$/kafka-tutorial/pom.xml" />
       </list>
     </option>
   </component>
