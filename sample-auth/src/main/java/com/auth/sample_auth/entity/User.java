@@ -1,4 +1,4 @@
-package com.auth.sample_auth.dto;
+package com.auth.sample_auth.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

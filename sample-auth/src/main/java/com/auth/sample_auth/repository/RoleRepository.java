@@ -1,6 +1,6 @@
 package com.auth.sample_auth.repository;
 
-import com.auth.sample_auth.dto.Role;
+import com.auth.sample_auth.entity.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface RoleRepository extends JpaRepository<Role, Long> {
