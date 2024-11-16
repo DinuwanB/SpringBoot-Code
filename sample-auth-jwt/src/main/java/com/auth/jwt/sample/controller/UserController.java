@@ -1,5 +1,9 @@
 package com.auth.jwt.sample.controller;
 
+import com.auth.jwt.sample.entity.AuthRequest;
+import com.auth.jwt.sample.entity.UserInfo;
+import com.auth.jwt.sample.service.JwtService;
+import com.auth.jwt.sample.service.UserInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.authentication.AuthenticationManager;
