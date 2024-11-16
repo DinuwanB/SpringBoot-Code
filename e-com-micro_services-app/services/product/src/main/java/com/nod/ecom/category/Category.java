@@ -1,5 +1,6 @@
-package com.nod.ecom.product;
+package com.nod.ecom.category;
 
+import com.nod.ecom.product.Product;
 import jakarta.persistence.*;
 import lombok.*;
 

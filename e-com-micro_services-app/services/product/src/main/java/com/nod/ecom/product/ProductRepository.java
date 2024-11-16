@@ -1,2 +1,6 @@
-package com.nod.ecom.product;public interface ProductRepository {
+package com.nod.ecom.product;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ProductRepository extends JpaRepository<Product, Integer> {
 }

@@ -2,6 +2,7 @@ package com.auth.sample_auth.service;
 
 import com.auth.sample_auth.dto.UserDto;
 import com.auth.sample_auth.entity.User;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
