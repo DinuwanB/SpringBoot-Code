@@ -41,7 +41,7 @@ public class SecurityConfig {
                         .requestMatchers(
                                 "/api/v1/auth/home",
                                 "/api/v1/auth/register",
-                                "/api/v1/generateToken").permitAll()
+                                "/api/v1/auth/generateToken").permitAll()
                         .requestMatchers("/api/v1/auth/user/**").hasAuthority("ROLE_USER")
                         .requestMatchers("/api/v1/auth/admin/**").hasAuthority("ROLE_ADMIN")
                         .anyRequest()
