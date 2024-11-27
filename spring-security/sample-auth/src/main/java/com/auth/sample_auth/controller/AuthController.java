@@ -4,12 +4,15 @@ import com.auth.sample_auth.entity.User;
 import jakarta.validation.Valid;
 import com.auth.sample_auth.dto.UserDto;
 import com.auth.sample_auth.service.UserService;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
@@ -22,39 +25,37 @@ public class AuthController {
         this.userService = userService;
     }
 
-    @GetMapping("/index")
-    public String home(){
-        return "index";
-    }
+    @PostMapping("/register")
+    public ResponseEntity<?> registerUser(@Valid @RequestBody UserDto userDto) {
+        System.out.println("------/api/auth/register");
 
-    @GetMapping("/register")
-    public String showRegistrationForm(Model model){
-        // create model object to store form data
-        UserDto user = new UserDto();
-        model.addAttribute("user", user);
-        return "register";
-    }
-
-    @PostMapping("/register/save")
-    public String registration(@Valid @ModelAttribute("user") UserDto userDto,
-                               BindingResult result,
-                               Model model){
-
+        // Check if the user already exists
         User existingUser = userService.findUserByEmail(userDto.getEmail());
-
-        if(existingUser != null && existingUser.getEmail() != null && !existingUser.getEmail().isEmpty()){
-            result.rejectValue("email", null,
-                    "There is already an account registered with the same email");
+        if (existingUser != null && existingUser.getEmail() != null) {
+            return ResponseEntity.status(HttpStatus.CONFLICT)
+                    .body("There is already an account registered with the same email.");
         }
 
-        if(result.hasErrors()){
-            model.addAttribute("user", userDto);
-            return "/register";
-        }
-
+        // Save the user
         userService.saveUser(userDto);
-        return "redirect:/register?success";
+        return ResponseEntity.status(HttpStatus.CREATED)
+                .body("User registered successfully.");
     }
+
+    @PostMapping("/api/login")
+    public ResponseEntity<?> loginUser(@RequestBody UserDto userDto) {
+        System.out.println("------/api/auth/login");
+
+        // Validate user credentials
+        User user = userService.findUserByEmail(userDto.getEmail());
+        if (user == null || !user.getPassword().equals(userDto.getPassword())) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
+                    .body("Invalid email or password.");
+        }
+
+        return ResponseEntity.ok("User logged in successfully.");
+    }
+
 
     @GetMapping("/users")
     public String users(Model model){

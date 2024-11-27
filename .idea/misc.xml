@@ -12,6 +12,15 @@
         <option value="$PROJECT_DIR$/Virtual Thread with SpringBoot/virtual-thread-blocker-app/pom.xml" />
         <option value="$PROJECT_DIR$/ci-cd/pom.xml" />
         <option value="$PROJECT_DIR$/kafka-tutorial/pom.xml" />
+        <option value="$PROJECT_DIR$/exception/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-data-rest-fe/jdbc-blog/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-data-rest-fe/multiple-datasource-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-kafka/kafka-tutorial/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-new-features/batch/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-new-features/Virtual Thread with SpringBoot/virtual-thread-blocker-app/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-new-features/Virtual Thread with SpringBoot/virtual-thread-main/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-security/sample-auth/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-security/sample-auth-jwt/pom.xml" />
       </list>
     </option>
   </component>

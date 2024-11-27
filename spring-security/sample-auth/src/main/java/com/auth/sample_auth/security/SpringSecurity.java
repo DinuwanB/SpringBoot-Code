@@ -29,7 +29,7 @@ public class SpringSecurity {
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests((authorize) -> authorize
-                        .requestMatchers("/login")
+                        .requestMatchers("/login","/register")
                         .permitAll()
                         .requestMatchers("/index").permitAll()
                         .requestMatchers("/users").hasRole("ADMIN")

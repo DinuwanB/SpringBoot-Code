@@ -7,10 +7,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="virtual-thread-main" />
+        <module name="exception" />
         <module name="virtual-thread-blocker" />
         <module name="kafka-tutorial" />
+        <module name="jdbc-blog" />
+        <module name="sample-auth" />
+        <module name="multiple-datasource-demo" />
+        <module name="batch" />
+        <module name="virtual-thread-main" />
         <module name="rest-client-sample" />
+        <module name="sample" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -20,10 +26,16 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="batch" options="-parameters" />
       <module name="ci-cd" options="-parameters" />
       <module name="demo-test" options="-parameters" />
+      <module name="exception" options="-parameters" />
+      <module name="jdbc-blog" options="-parameters" />
       <module name="kafka-tutorial" options="-parameters" />
+      <module name="multiple-datasource-demo" options="-parameters" />
       <module name="rest-client-sample" options="-parameters" />
+      <module name="sample" options="-parameters" />
+      <module name="sample-auth" options="-parameters" />
       <module name="virtual-thread-blocker" options="-parameters" />
       <module name="virtual-thread-main" options="-parameters" />
     </option>
